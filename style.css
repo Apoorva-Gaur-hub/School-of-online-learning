@@ -1,0 +1,1290 @@
+/* Universal Reset to remove white marks/gaps */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+header {
+    width: 100%;
+    display: block;
+}
+
+/* Top Red Section */
+.top-nav {
+    background-color: #701111;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 6%; /* Professional breathing room */
+    width: 100%;
+    min-height: auto;
+    overflow: hidden;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center; /* Vertical Center */
+}
+
+.main-logo {
+    height:210px; /* Enlarged Logo */
+    width: auto;
+    display:block;
+    margin-top: 0px;    
+    margin-bottom: 2px; 
+}
+
+.logo-text {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    line-height: 1;
+}
+
+.logo-text .light {
+    font-size: 35px;
+    font-weight: 400;
+}
+
+.logo-text .bold {
+    font-size: 18px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+}
+
+/* Compare Button Styling */
+.compare-btn {
+    background-color: #d4a373;
+    color: #51271b;
+    border: none;
+    padding: 10px 25px;
+    font-weight: 1000;
+    text-transform: uppercase;
+    font-size: 15px;
+    border-radius: 17px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.compare-btn:hover {
+    background-color: #c59262;
+    transform: translateY(-2px);
+}
+
+
+/* Bottom Blue Navigation */
+.main-nav {
+    background-color: #0A1D37;
+    display: flex;
+    justify-content: flex-start; 
+    align-items: center;
+    padding: 0 8%;
+    height: 40px; 
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 40px;
+    height: 100%;
+    align-items: center;
+    justify-content:center;
+    margin-right:  auto; 
+}
+
+.nav-links li a, .contact-link {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 900;
+    transition: opacity 0.3s;
+}
+
+.nav-links li a:hover {
+    opacity: 0.8;
+}
+
+/* Responsive Fix: Jab screen choti ho */
+@media (max-width: 900px) {
+    .top-nav, .main-nav {
+        flex-direction: column;
+        padding: 5px 20px;
+        height: auto;
+        gap: 15px;
+    }
+    
+    .nav-links {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+@media (max-width: 900px) {
+    .main-nav {
+        height: auto; 
+        padding: 10px 20px;
+    }
+    
+    .nav-links {
+        flex-direction: row; 
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 100%;
+    }
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(to bottom, #ffffff, #f0f2f5);
+    padding: 60px 8%;
+}
+
+.hero-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.hero-text {
+    flex: 1;
+}
+
+.hero-text h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 55px;
+    color: #0A1D37;
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+.hero-text p {
+    color: #555;
+    margin-bottom: 30px;
+    max-width: 400px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.hero-buttons button {
+    padding: 12px 30px;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btn-enroll { background-color: #701111; }
+.btn-learn { background-color: #0A1D37; }
+
+.hero-image {
+    flex: 1;
+    text-align: right;
+}
+
+.hero-image img {
+    width: 100%;
+    max-width: 500px;
+}
+
+/* Features Section */
+.features {
+    display: flex;
+    justify-content: space-around;
+    padding: 50px 8%;
+    text-align: center;
+}
+
+.feature-item {
+    flex: 1;
+}
+
+.feature-item img {
+    width: 80px;
+    margin-bottom: 15px;
+}
+
+.feature-item h3 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.feature-item p {
+    font-size: 14px;
+    color: #666;
+}
+/*section 2*/
+
+
+.programs-section {
+    padding: 60px 5%;
+    background-color: #fff;
+    text-align: center;
+}
+
+.section-header h2 {
+    font-size: 28px;
+    color: #0A1D37;
+    margin-bottom: 10px;
+}
+
+.section-header h2 span {
+    color: #701111; /* Dark Maroon from image */
+}
+
+.section-header p {
+    color: #666;
+    margin-bottom: 40px;
+}
+
+/* Slider Layout */
+.slider-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.card-wrapper {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding: 20px 10px;
+    scroll-behavior: smooth;
+}
+
+/* Hide scrollbar */
+.card-wrapper::-webkit-scrollbar {
+    display: none;
+}
+
+/* Individual Card Styling */
+.course-card {
+    min-width: 280px;
+    background: #eef5fa; /* Light blueish bg from image */
+    border-radius: 10px;
+    overflow: hidden;
+    scroll-snap-align: start;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    border: 1px solid #dce8f2;
+}
+
+.university-logo {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background: #fff;
+}
+
+.university-logo img {
+    width: 100px;
+}
+
+.uni-name {
+    font-size: 14px;
+    font-weight: bold;
+    color: #0A1D37;
+    text-align: left;
+}
+
+.card-body {
+    padding: 20px;
+    text-align: left;
+}
+
+.uni-tag {
+    font-size: 12px;
+    color: #888;
+}
+
+.card-body h4 {
+    font-size: 16px;
+    margin: 10px 0;
+    color: #333;
+}
+
+.card-body p {
+    font-size: 13px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+/* Buttons inside card */
+.card-footer {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center; /* vertical alignment */
+}
+
+
+.btn-view, .btn-admission {
+    flex: 1;
+    padding: 8px;
+    border-radius: 5px;
+    font-size: 12px;
+    cursor: pointer;
+    border: none;
+    font-weight: 600;
+}
+
+.btn-view {
+    background: #fff;
+    color: #701111;
+    border: 1px solid #ddd;
+}
+
+.btn-admission {
+    background: #701111;
+    color: #fff;
+}
+
+/* Navigation Arrows */
+.nav-btn {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    position: absolute;
+    z-index: 10;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    font-size: 18px;
+}
+
+.prev { left: -20px; }
+.next { right: -20px; }
+
+.nav-btn:hover {
+    background-color: #f0f0f0;
+}
+
+/*section 3*/
+
+
+
+.why-section {
+    padding: 60px 10%;
+    text-align: center;
+    background-color: #fff;
+}
+
+.header h2 {
+    font-size: 28px;
+    color: #0A1D37;
+    margin-bottom: 15px;
+}
+
+.header h2 span {
+    color: #701111; /* Maroon color from image */
+}
+
+.header p {
+    font-size: 14px;
+    color: #666;
+    max-width: 800px;
+    margin: 0 auto 50px auto;
+    line-height: 1.6;
+}
+
+/* Grid Layout */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 Columns */
+    gap: 20px;
+}
+
+/* Common Box Styling */
+.info-box {
+    padding: 30px;
+    border-radius: 8px;
+    color: white;
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animation property */
+    cursor: default;
+}
+
+/* Animation: Hover Effect */
+.info-box:hover {
+    transform: translateY(-8px); /* Card thoda upar uthega */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.info-box h4 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.info-box p {
+    font-size: 14px;
+    opacity: 0.9;
+    font-weight: 300;
+}
+
+/* Alternate Colors */
+.blue-box {
+    background-color: #1B3A61; /* Navy Blue */
+}
+
+.maroon-box {
+    background-color: #9C2F2F; /* Deep Maroon */
+}
+
+/* Responsive for Mobile */
+@media (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: 1fr; /* Mobile par 1 column */
+    }
+}
+
+/* Info Boxes ke liye hand cursor aur animation */
+.info-box {
+    padding: 30px;
+    border-radius: 8px;
+    
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    
+    /* Hand cursor yahan add kiya gaya hai */
+    cursor: pointer; 
+}
+
+/* Hover effect ko thoda aur smooth banane ke liye */
+.info-box:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+   
+}
+
+/* Agar aapne buttons use kiye hain toh unpar bhi pointer cursor: */
+.btn-view, .btn-syllabus, .compare-btn, .nav-btn {
+    cursor: pointer;
+}
+
+/*secction 4*/
+/* Section 4 Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #ffffff;
+    padding: 60px 0;
+}
+
+.main-wrapper {
+    max-width: 1200px;
+    margin: auto;
+    text-align: center;
+}
+
+.hero-header {
+    margin-bottom: 40px;
+    padding: 0 20px;
+}
+
+.hero-header h1 {
+    font-size: 32px;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+.highlight { color: #a52a2a; }
+
+.main-desc {
+    color: #666;
+    font-size: 16px;
+    margin-bottom: 25px;
+}
+
+.sub-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Slider Wrapper - Isko Flex banaya hai center karne ke liye */
+.slider-wrapper {
+    position: relative;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    padding: 0 60px;
+    margin-top: 30px;
+}
+
+.slider-container {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    gap: 30px;
+    padding: 20px 10px;
+    scrollbar-width: none;
+    /* Jab cards kam honge toh ye unhe center mein rakhega */
+    justify-content: center; 
+}
+
+.slider-container::-webkit-scrollbar { display: none; }
+
+/* Info Card - Fixed proper width */
+.info-card {
+    min-width: 280px; /* Width thodi badhayi hai professional look ke liye */
+    background-color: #f0f8fa; /* Light cyan-blue shade */
+    padding: 40px 20px;
+    border-radius: 12px;
+    flex-shrink: 0;
+    transition: 0.3s ease;
+    border: 1px solid #e0eef1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.info-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+.university-logo img {
+    max-width: 100%;
+    object-fit: contain;
+}
+
+/* Action Button */
+.action-btn {
+    border: 1.5px solid #a52a2a;
+    color: #a52a2a;
+    background: transparent;
+    padding: 10px 25px;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 6px;
+    font-size: 13px;
+    transition: 0.3s;
+}
+
+.action-btn:hover {
+    background-color: #a52a2a;
+    color: #fff;
+}
+
+/* Nav Buttons (Arrows) */
+.nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #fff;
+    color: #a52a2a;
+    border: 1px solid #ddd;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+}
+
+.nav-btn:hover {
+    background: #a52a2a;
+    color: #fff;
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
+/* Mobile optimization */
+@media (max-width: 900px) {
+    .slider-container {
+        justify-content: flex-start; /* Mobile pe scroll ke liye left align */
+    }
+}
+
+/*section 5*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #fff;
+    padding: 50px 0;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.header h1 {
+    color: #1a233e;
+    font-weight: 800;
+    font-size: 30px;
+}
+
+.header h1 span {
+    color: #8b1d1d;
+}
+
+.header p {
+    color: #666;
+    margin-top: 8px;
+}
+
+/* Slider Style */
+.logo-slider {
+    width: 100%;
+    overflow: hidden;
+    padding: 10px 0;
+    background: transparent; /* Background clear rakha hai */
+}
+
+.logo-track {
+    display: flex;
+    width: calc(300px * 6);
+}
+
+/* Row-specific animations */
+.row-right {
+    animation: slideRight 20s linear infinite;
+}
+
+.row-left {
+    animation: slideLeft 20s linear infinite;
+}
+
+/* Hover effect: Sabhi rows ruk jayengi */
+.logo-slider:hover .logo-track {
+    animation-play-state: paused;
+    cursor: pointer;
+}
+
+/* Keyframe for Right to Left */
+@keyframes slideRight {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(calc(-300px * 3)); }
+}
+
+/* Keyframe for Left to Right */
+@keyframes slideLeft {
+    0% { transform: translateX(calc(-300px * 3)); }
+    100% { transform: translateX(0); }
+}
+
+.logo-item {
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo-item img {
+    height: 45px;
+    max-width: 170px;
+    object-fit: contain;
+}
+/*section 6*/
+/* --- Section 6 Styles --- */
+/* --- SECTION 6: UNIVERSITY SLIDER WITH COLLAGE BACKGROUND --- */
+
+.uni-slider-section-6 {
+    background-image: 
+                      url('images/Stud discuss.png');
+    background-size: cover;
+    padding: 80px 0;
+    overflow: hidden;
+    width: 100%;
+}
+
+.uni-slider-container-6 {
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+}
+
+.uni-track-6 {
+    display: flex;
+    /* 10 cards * 250px = 2500px total width */
+    width: 2500px; 
+    animation: step-slide-6 18s infinite; 
+}
+
+/* Mouse over par stop */
+.uni-track-6:hover {
+    animation-play-state: paused;
+}
+
+.uni-card-6 {
+    background: #fff;
+    width: 250px; 
+    height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    margin: 0 10px; /* <--- YAHAN GAP ADD HOGA (Left aur Right mein 10px) */
+    border-radius: 12px; /* Gap ke sath rounded corners ache lagenge */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.uni-card-6 img {
+    max-width: 80%;
+    max-height: 80%;
+    object-fit: contain;
+}
+
+/* 5 Cards move karne ke baad wapas loop 0 par aa jayega */
+@keyframes step-slide-6 {
+    0%, 15%  { transform: translateX(0); }
+    20%, 35% { transform: translateX(-270px); } /* 1 Card + Gap */
+    40%, 55% { transform: translateX(-540px); } /* 2 Cards + Gap */
+    60%, 75% { transform: translateX(-810px); } /* 3 Cards + Gap */
+    80%, 95% { transform: translateX(-1080px); }/* 4 Cards + Gap */
+    100%     { transform: translateX(-1350px); }/* 5 Cards + Gap (Loop point) */
+}
+
+.uni-main-title-6 { font-weight: 800; font-size: 2.2rem; margin-top: 40px; color: #1a2b48;}
+.highlight-6 { color: #8b2323; }
+.uni-subtitle-6 { color: #666; font-size: 14px; }
+
+/* elegiility */
+/* Custom Styles based on Theme */
+body {
+    background-color: #f8f9fa; /* Light Gray Background */
+    font-family: 'Poppins', sans-serif;
+}
+
+.eligibility-section {
+    background-color: #FFFFFF;
+}
+
+/* Headline Styling */
+.section-headline {
+    color: #0B1F3A; /* Secondary Color */
+    font-weight: 700;
+    font-size: 2.5rem;
+}
+
+.highlight {
+    color: #7A0C0C; /* Primary Maroon */
+}
+
+.underline {
+    width: 80px;
+    height: 4px;
+    background-color: #D4B26A; /* Accent Gold */
+    border-radius: 2px;
+}
+
+/* Card Styling - Picture 1 Style */
+.eligibility-card {
+    background: #FFFFFF;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    border: 1px solid #eeeeee;
+    transition: transform 0.3s ease;
+    overflow: hidden;
+}
+
+.eligibility-card:hover {
+    transform: translateY(-5px);
+    border-color: #D4B26A;
+}
+
+/* Card Headers */
+.card-header-custom {
+    background-color: #0B1F3A; /* Dark Blue */
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    color: white;
+}
+
+.card-header-custom.foreign-header {
+    background-color: #7A0C0C; /* Maroon for Contrast */
+}
+
+.flag-icon {
+    width: 35px;
+    height: 35px;
+}
+
+.card-header-custom h3 {
+    margin: 0;
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+/* Card Content */
+.card-body-custom {
+    padding: 30px;
+}
+
+.program-title {
+    color: #0B1F3A;
+    font-weight: 700;
+    border-left: 4px solid #D4B26A; /* Gold left border */
+    padding-left: 10px;
+    margin-bottom: 15px;
+}
+
+.card-body-custom ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.card-body-custom ul li {
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 10px;
+    color: #555555; /* Secondary text color */
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* Checkmark logic using Primary Maroon */
+.card-body-custom ul li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: #7A0C0C; /* Maroon checkmark */
+    font-weight: bold;
+}
+
+.card-body-custom a {
+    color: #7A0C0C;
+    text-decoration: underline;
+    font-weight: 600;
+}
+
+.card-body-custom a:hover {
+    color: #D4B26A;
+}
+
+/*section 7*/
+/* --- TESTIMONIAL SECTION START --- */
+.user-feedback-section {
+    padding: 70px 20px;
+    text-align: center;
+    background-color: #ffffff;
+}
+
+.feedback-container {
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+.feedback-heading h2 {
+    font-size: 30px;
+    color: #1a233e;
+}
+
+.feedback-heading h2 span {
+    color: #8b1d1d; /* Maroon color */
+}
+
+.feedback-heading p {
+    color: #666;
+    margin-top: 10px;
+}
+
+/* Hide Radio Buttons */
+input[name="feedback-slide"] {
+    display: none;
+}
+
+/* Viewport for Sliders */
+.feedback-window {
+    width: 100%;
+    overflow: hidden;
+    margin-top: 40px;
+}
+
+/* Slider Track */
+.feedback-track {
+    display: flex;
+    width: 300%; /* Number of slides * 100 */
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Each Slide Card */
+.feedback-card {
+    width: 33.33%;
+    padding: 10px;
+}
+
+.feedback-comment {
+    font-size: 17px;
+    line-height: 1.6;
+    color: #444;
+    margin-bottom: 30px;
+    font-style: italic;
+}
+
+/* Profile Image with Yellow Background */
+.feedback-avatar-bg {
+    width: 90px;
+    height: 90px;
+    background-color: #f1c40f; /* Yellow Circle */
+    border-radius: 50%;
+    margin: 0 auto 15px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    overflow: hidden;
+    
+}
+
+.feedback-avatar-bg img {
+    width: 100%;
+}
+
+.feedback-profile h4 {
+    margin: 0;
+    font-size: 18px;
+    color: #1a233e;
+}
+
+.feedback-profile span {
+    font-size: 14px;
+    color: #777;
+}
+
+/* Slider Logic Using CSS Only */
+#slide-dot-1:checked ~ .feedback-window .feedback-track { transform: translateX(0); }
+#slide-dot-2:checked ~ .feedback-window .feedback-track { transform: translateX(-33.33%); }
+#slide-dot-3:checked ~ .feedback-window .feedback-track { transform: translateX(-66.66%); }
+
+/* Dot Navigation Styling */
+.feedback-nav-dots {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 25px;
+}
+
+.nav-dot-item {
+    width: 10px;
+    height: 10px;
+    background: #ccc;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* Active Dot Styling (Blue Pill Shape) */
+#slide-dot-1:checked ~ .feedback-nav-dots .nav-dot-item:nth-child(1),
+#slide-dot-2:checked ~ .feedback-nav-dots .nav-dot-item:nth-child(2),
+#slide-dot-3:checked ~ .feedback-nav-dots .nav-dot-item:nth-child(3) {
+    background: #007bff; /* Blue dot */
+    width: 25px;
+    border-radius: 10px;
+}
+/* --- TESTIMONIAL SECTION END --- */
+
+/*section 8*/
+/* --- Expert Section Unique Styles --- */
+.expert-box-section {
+    position: relative;
+    width: 100%;
+    min-height: 500px;
+    /* Background Image setup */
+    background-image: url('images/tallk\ expert\ img.png '); 
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+}
+
+/* Blur Layer */
+.expert-box-blur-layer {
+    background: rgba(0, 0, 0, 0.6); 
+    backdrop-filter: blur(0px); 
+    -webkit-backdrop-filter: blur(6px);
+    width: 100%;
+    height: 100%;
+    padding: 80px 20px;
+}
+
+.expert-box-container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.expert-box-text {
+    color: #ffffff;
+    text-align: left;
+}
+
+.expert-box-mini {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.expert-box-main {
+    font-size: 52px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    letter-spacing: -1px;
+}
+
+.expert-box-para {
+    font-size: 17px;
+    max-width: 550px;
+    line-height: 1.6;
+    margin-bottom: 40px;
+    opacity: 0.85;
+}
+
+/* Button Grid: 2 columns layout */
+.expert-box-button-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 300px);
+    gap: 15px;
+}
+
+/* Glass Buttons Styling */
+.expert-btn-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 55px;
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* Hover effect */
+.expert-btn-item:hover {
+    background-color: #ffffff;
+    color: #000000;
+    transform: scale(1.02);
+}
+
+/* Responsive for Mobile */
+@media (max-width: 768px) {
+    .expert-box-main { font-size: 36px; }
+    .expert-box-button-grid {
+        grid-template-columns: 1fr; 
+        max-width: 100%;
+    }
+}
+
+/*section 9*/
+.custom-faq-section {
+    padding: 60px 20px;
+    background-color: #fff;
+    font-family: Arial, sans-serif;
+}
+
+.faq-container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.faq-main-heading {
+    text-align: center;
+    font-size: 28px;
+    color: #1a233e; 
+    margin-bottom: 40px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 15px;
+}
+
+.faq-main-heading span {
+    color: #8b1d1d;
+}
+
+.faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.faq-item {
+    border-radius: 10px;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.faq-question {
+    background-color: #e0e0e0; /* Grey box */
+    padding: 18px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    font-weight: 500;
+    color: #333;
+}
+
+.faq-icon {
+    font-size: 22px;
+    transition: 0.3s;
+}
+
+/* Jab open ho tab blue background ho jaye */
+.faq-item.active .faq-question {
+    background-color: #ebf5ff; /* Light Blue background */
+    color: #000;
+}
+
+.faq-item.active .faq-icon {
+    transform: rotate(45deg); /* + ko x banata hai */
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-out;
+    background-color: #ebf5ff; /* Matching light blue */
+}
+
+.faq-answer p {
+    padding: 0 25px 20px 25px;
+    margin: 0;
+    font-size: 15px;
+    line-height: 1.6;
+    color: #444;
+}
+
+/*10*/
+/* --- Final Footer Styling --- */
+.sol-footer-wrap {
+    width: 100%;
+    font-family: 'Arial', sans-serif;
+}
+
+.sol-footer-gradient {
+    background: linear-gradient(to right, #800000 0%, #d40000 100%);
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.sol-footer-text {
+    color: #ffffff;
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 25px;
+}
+
+.sol-gold-text {
+    color: #c5a059; /* Gold color from image */
+}
+
+.sol-footer-btns {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.sol-btn-dark {
+    background-color: #1c1c30;
+    color: #ffffff;
+    padding: 12px 25px;
+    text-decoration: none;
+    font-weight: 600;
+    min-width: 220px;
+    border-radius: 2px;
+}
+
+/* Bottom Area */
+.sol-footer-bottom {
+    background-color: #ffffff;
+    padding: 40px 20px;
+}
+
+.sol-bottom-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+/* Logo & Copyright Area */
+.sol-logo-area {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; 
+}
+
+.sol-footer-logo {
+    height: 55px;
+    width: auto;
+    object-fit: contain;
+}
+
+.sol-copyright {
+    font-size: 16px;
+    color: #4a5568; 
+    font-weight: 600;
+    margin: 0;
+}
+
+/* Social & Links Area */
+.sol-social-side {
+    text-align: right;
+}
+
+.sol-social-icons {
+    margin-bottom: 25px;
+}
+
+.sol-social-icons a {
+    background: #000;
+    color: #fff;
+    padding: 6px 8px;
+    border-radius: 4px;
+    margin-left: 10px;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.sol-legal-links {
+    font-size: 14px;
+    color: #4a5568;
+}
+
+.sol-legal-links a {
+    color: #4a5568;
+    text-decoration: none;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .sol-bottom-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .sol-social-side {
+        text-align: center;
+        margin-top: 30px;
+    }
+}

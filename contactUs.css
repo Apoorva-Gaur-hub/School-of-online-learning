@@ -1,0 +1,96 @@
+/* Color Palette */
+:root {
+    --main-maroon: #8b2323;
+    --bg-beige: #f9f7f4;
+    --text-dark: #1a2b48;
+}
+
+.contact-body-unique {
+    background-color: var(--bg-beige);
+    font-family: 'Arial', sans-serif;
+}
+
+/* Header Maroon Bar */
+.contact-header-6 {
+    background-color: var(--main-maroon);
+    padding: 15px 0;
+    border-bottom: 5px solid rgba(0,0,0,0.1);
+}
+
+.contact-logo-img {
+    height: 40px;
+    background: white;
+    padding: 5px 15px;
+    border-radius: 4px;
+}
+
+/* Titles */
+.contact-title-6 {
+    color: var(--text-dark);
+}
+
+.text-maroon {
+    color: var(--main-maroon);
+}
+
+/* Form Card with Blur/Shadow effect */
+.contact-card-6 {
+    background: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+    border: 1px solid rgba(0,0,0,0.05);
+}
+
+.form-control {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fafafa;
+}
+
+/* Send Button */
+.btn-send-6 {
+    background-color: var(--main-maroon);
+    color: white;
+    padding: 12px;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.btn-send-6:hover {
+    background-color: #6d1b1b;
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* Icons */
+.icon-circle-6 {
+    width: 40px;
+    height: 40px;
+    background: rgba(139, 35, 35, 0.1);
+    color: var(--main-maroon);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.social-links-6 a {
+    color: #b5a48d; /* Gold/Bronze color from pic */
+    font-size: 20px;
+    margin-right: 15px;
+    text-decoration: none;
+}
+
+/* Back to Home Link */
+.back-home-link {
+    color: var(--text-dark);
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.back-home-link:hover {
+    color: var(--main-maroon);
+}

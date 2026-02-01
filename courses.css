@@ -1,0 +1,151 @@
+/* Pura Course Page Style */
+.course-page-body {
+    background-color: #f8fafd;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    color: #0B1F3A; /* Navy from image */
+}
+
+/* Back Button Bar */
+.course-nav-container {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.course-back-btn {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    background: #fff;
+    color: #0B1F3A;
+    padding: 8px 18px;
+    border-radius: 25px;
+    font-weight: 600;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    transition: 0.3s;
+}
+
+.course-back-btn:hover {
+    background: #7A0C0C; /* Maroon */
+    color: #fff;
+}
+
+.course-arrow {
+    margin-right: 8px;
+}
+
+/* Wrapper and Header */
+.course-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.course-main-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.course-main-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.gold-span {
+    color: #D4B26A; /* Gold */
+}
+
+.course-main-header p {
+    color: #555555;
+    font-size: 1rem;
+}
+
+/* 12 Course Grid Layout */
+.course-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 25px;
+}
+
+/* Card Design based on provided image */
+.course-card {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+    border: 1px solid #eee;
+    transition: transform 0.3s;
+}
+
+.course-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+}
+
+.course-inner {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.course-icon-box {
+    width: 55px;
+    height: 55px;
+    background: #f0f4f8;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.course-icon-box img {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+}
+
+.course-info h3 {
+    margin: 0;
+    font-size: 1.15rem;
+    color: #0B1F3A;
+}
+
+.course-info p {
+    margin: 5px 0 0;
+    color: #666;
+    font-size: 0.85rem;
+    line-height: 1.2;
+}
+
+/* Explore Button - Gold to Maroon transition */
+.course-explore-btn {
+    text-decoration: none;
+    background-color: #D4B26A; /* Gold accent */
+    color: #0B1F3A;
+    padding: 8px 22px;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: 0.3s;
+}
+
+.course-explore-btn:hover {
+    background-color: #7A0C0C; /* Maroon on hover */
+    color: #fff;
+}
+
+/* Mobile Responsive */
+@media (max-width: 600px) {
+    .course-card {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+    .course-inner {
+        flex-direction: column;
+    }
+}

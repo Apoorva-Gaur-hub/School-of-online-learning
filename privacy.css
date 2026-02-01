@@ -1,0 +1,62 @@
+/* Color Palette from Source Image */
+:root {
+    --primary-red: #7A0C0C;
+    --secondary-blue: #0B1F3A;
+    --text-dark: #1A1A1A;
+    --text-grey: #555555;
+    --white: #FFFFFF;
+}
+
+body {
+    background-color: #f8f9fa;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    color: var(--text-dark);
+    line-height: 1.6;
+}
+
+.policy-header {
+    background-color: var(--secondary-blue); /* As per recommended theme */
+    color: var(--white);
+    padding: 40px 0;
+}
+
+.policy-header h1 {
+    font-weight: 700;
+    font-size: 2.5rem;
+}
+
+.content-box {
+    background-color: var(--white);
+    border-radius: 8px;
+    border-top: 5px solid var(--primary-red); /* Using Primary color as highlight */
+}
+
+h3 {
+    color: var(--secondary-blue);
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+p {
+    color: var(--text-grey);
+    margin-bottom: 1.5rem;
+    text-align: justify;
+}
+
+strong {
+    color: var(--text-dark);
+}
+
+.btn-back {
+    background-color: var(--primary-red);
+    color: var(--white);
+    padding: 10px 30px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.btn-back:hover {
+    background-color: var(--secondary-blue);
+    color: var(--white);
+}

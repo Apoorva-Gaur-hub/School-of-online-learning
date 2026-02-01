@@ -1,0 +1,144 @@
+/* Universities Page Global Styles */
+.uni-body {
+    background-color: #f8fafd;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.uni-nav-container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+/* Back to Home Button Style */
+.uni-home-back {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    background: #ffffff;
+    color: #0B1F3A; /* Navy */
+    padding: 10px 18px;
+    border-radius: 50px;
+    font-weight: 600;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    transition: 0.3s ease;
+    border: 1px solid #eee;
+}
+
+.uni-home-back:hover {
+    background-color: #7A0C0C; /* Maroon */
+    color: #fff;
+    border-color: #7A0C0C;
+}
+
+.arrow-icon {
+    margin-right: 10px;
+    font-size: 18px;
+}
+
+/* Header Styling */
+.uni-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.uni-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.uni-header h1 {
+    color: #0B1F3A; /* Navy */
+    font-size: 2.5rem;
+}
+
+.gold-text {
+    color: #D4B26A; /* Gold */
+}
+
+/* Grid Layout */
+.uni-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 25px;
+}
+
+/* University Card Design */
+.uni-card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+    border: 1px solid #f0f0f0;
+    transition: transform 0.3s ease;
+}
+
+.uni-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+.uni-content {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo-box img {
+    width: 55px;
+    height: 55px;
+    object-fit: contain;
+    background: #f9f9f9;
+    border-radius: 8px;
+    padding: 5px;
+}
+
+.text-box h3 {
+    margin: 0;
+    font-size: 1.05rem;
+    color: #0B1F3A;
+}
+
+.text-box p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* View Link Button */
+.view-link-btn {
+    text-decoration: none;
+    background-color: #D4B26A; /* Gold */
+    color: #0B1F3A; /* Navy */
+    padding: 8px 22px;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: 0.3s;
+    border: 2px solid transparent;
+}
+
+.view-link-btn:hover {
+    background-color: #7A0C0C; /* Maroon */
+    color: #fff;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .uni-grid {
+        grid-template-columns: 1fr;
+    }
+    .uni-card {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+    .uni-content {
+        flex-direction: column;
+    }
+}

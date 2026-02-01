@@ -1,0 +1,84 @@
+/* Color Palette from Image */
+:root {
+    --primary: #7A0C0C;      /* Maroon */
+    --secondary: #0B1F3A;    /* Navy Blue */
+    --accent: #D4B26A;       /* Gold/Tan for icons */
+    --bg-white: #FFFFFF;
+    --text-primary: #1A1A1A;
+    --text-secondary: #555555;
+}
+
+body {
+    background-color: #F7F7F7;
+    font-family: 'Arial', sans-serif;
+    color: var(--text-primary);
+}
+
+/* Header - Secondary Color */
+.terms-header {
+    background-color: var(--secondary);
+    padding: 40px 0;
+}
+
+/* Branding */
+.color-primary { color: var(--primary); }
+.color-secondary { color: var(--secondary); }
+.text-secondary-light { color: var(--text-secondary); font-size: 1.1rem; }
+
+/* Terms Card */
+.terms-card {
+    background: var(--bg-white);
+    border-radius: 12px;
+    border: 1px solid #EAEAEA;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+}
+
+.terms-content p {
+    line-height: 1.8;
+    color: var(--text-secondary);
+    margin-bottom: 1.2rem;
+}
+
+/* Section Headings - Secondary Color */
+.section-title {
+    color: var(--secondary);
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+/* Custom List with Accent Color Icons */
+.custom-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.custom-list li {
+    margin-bottom: 10px;
+    color: var(--text-secondary);
+}
+
+.custom-list i {
+    color: var(--accent); /* #D4B26A from image */
+    margin-right: 10px;
+}
+
+/* Back Link - Red & No Underline */
+.back-link {
+    color: #FF0000 !important;
+    text-decoration: none !important;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: 0.3s;
+}
+
+.back-link:hover {
+    color: var(--primary) !important;
+}
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+    .branding-title h2 { font-size: 1.5rem; }
+    .terms-header h1 { font-size: 1.8rem; }
+}

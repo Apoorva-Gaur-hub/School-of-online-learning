@@ -1,0 +1,76 @@
+/* Custom Colors */
+:root {
+    --primary-bg: #7a0c0c; /* Dark Red */
+    --secondary-bg: #0b1f3a; /* Navy Blue */
+    --accent-gold: #d4b26a; /* Gold Line */
+}
+
+body {
+    background: linear-gradient(135deg, var(--primary-bg), var(--secondary-bg));
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+}
+
+.form-card {
+    background: rgba(0, 0, 0, 0.2); /* Semi-transparent overlay */
+    padding: 40px;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    max-width: 800px;
+    width: 100%;
+}
+
+.header-section h2 {
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+
+.gold-line {
+    border-top: 2px solid var(--accent-gold);
+    opacity: 1;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.form-label {
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+
+/* Input and Select Styling */
+.form-control, .custom-select {
+    background: white !important;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    color: #333;
+}
+
+/* Specific styling for Dropdown to match design */
+.custom-select {
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+
+.btn-register {
+    background: linear-gradient(to right, #0b1f3a, #7a0c0c);
+    color: white;
+    border: none;
+    padding: 10px 40px;
+    font-size: 1.1rem;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.btn-register:hover {
+    transform: scale(1.05);
+    color: #d4b26a;
+}
+
+/* Responsive Fixes */
+@media (max-width: 576px) {
+    .form-card {
+        padding: 20px;
+        margin: 10px;
+    }
+}

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>University Comparison Tool</title>
+    <link rel="stylesheet" href="compare.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+
+    <!-- back to home  -->
+    <div class="course-nav-container">
+        <a href="index.html" class="course-back-btn">
+            <span class="course-arrow">←</span> Back to Home
+        </a>
+    </div>
+    
+
+    <section class="comparison-section">
+        <div class="container">
+            <h1>Find the <span>Right University</span> for You</h1>
+            <p>Discover your ideal university for the July 2026 academic session by comparing top courses.</p>
+
+            <div class="grid-wrapper">
+                <div class="selection-card highlight">
+                    <div class="icon-box">📖</div>
+                    <select id="courseSelect">
+                        <option value="" disabled selected>Select Course</option>
+                        <option value="mba">MBA (Online)</option>
+                        <option value="mca">MCA (Online)</option>
+                        <option value="bba">BBA (Distance)</option>
+                    </select>
+                </div>
+
+                <div class="selection-card">
+                    <div class="icon-box">🏛️</div>
+                    <select class="uniSelect">
+                        <option value="" disabled selected>Select a University</option>
+                        <option>Amity University</option>
+                        <option>LPU Online</option>
+                        <option>Chandigarh University</option>
+                    </select>
+                </div>
+
+                <div class="selection-card">
+                    <div class="icon-box">🏛️</div>
+                    <select class="uniSelect">
+                        <option value="" disabled selected>Select a University</option>
+                        <option>Manipal University</option>
+                        <option>IGNOU</option>
+                        <option>Suresh Gyan Vihar</option>
+                    </select>
+                </div>
+
+                <div class="selection-card">
+                    <div class="icon-box">🏛️</div>
+                    <select class="uniSelect">
+                        <option value="" disabled selected>Select a University</option>
+                        <option>Delhi University</option>
+                        <option>Symbiosis</option>
+                        <option>Jain University</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- <a href="compareNow.html"></a> -->
+            <button id="compareBtn" class="main-btn">Compare Now</button>
+        </div>
+    </section>
+
+    <!--section 10-->
+    <footer class="sol-footer-wrap">
+    <div class="sol-footer-gradient">
+        <div class="sol-footer-content">
+            <h2 class="sol-footer-text">
+                Your Dream Starts With You , <br>
+                You Can Start With <span class="sol-gold-text">School Of Online Learning.</span>
+            </h2>
+            <div class="sol-footer-btns">
+                <a href="contactUs.html" class="sol-btn-dark">Get Free Counseling Now</a>
+                <a href="enroll.html" class="sol-btn-dark">Apply Now</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="sol-footer-bottom">
+        <div class="sol-bottom-container">
+            <div class="sol-logo-area">
+                <p class="sol-copyright">@2026 All Right Reserved</p>
+            </div>
+            
+            <div class="sol-social-side">
+                <div class="sol-social-icons">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                </div>
+                <div class="sol-legal-links">
+                    <a href="#">Privacy Policy</a> | <a href="#">Our Terms</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+    <script >
+        document.getElementById('compareBtn').addEventListener('click', function() {
+    const course = document.getElementById('courseSelect').value;
+    const universities = document.querySelectorAll('.uniSelect');
+    
+    let selectedUnis = [];
+    universities.forEach(uni => {
+        if(uni.value) selectedUnis.push(uni.value);
+    });
+
+    if(!course) {
+        alert("Please select a course first!");
+    } else if (selectedUnis.length < 2) {
+        alert("Select at least 2 universities to apply.");
+    } else {
+        alert("Comparing " + course + " for: " + selectedUnis.join(", "));
+        // Yahan aap results  dal sakte hain
+    }
+});
+    </script>
+</body>
+</html>

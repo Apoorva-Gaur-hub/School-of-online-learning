@@ -1,0 +1,50 @@
+html { scroll-behavior: smooth; }
+body { font-family: 'Inter', sans-serif; line-height: 1.6; color: #333; }
+
+.back-link { text-decoration: none; color: #333; font-weight: bold; font-size: 14px; }
+.bg-maroon { background-color: #8b1d1d; }
+.text-navy { color: #002147; }
+.nav-link { color: white !important; font-weight: 600; font-size: 14px; padding: 10px 20px !important; }
+
+/* Manipal Branding Color for Tags */
+.course-tag {
+    background-color: #fff9c4; color: #fbc02d; border: 1px solid #fbc02d;
+    padding: 6px 15px; border-radius: 20px; font-weight: 500;
+}
+
+.section-title { font-weight: bold; border-left: 5px solid #8b1d1d; padding-left: 15px; margin-bottom: 25px; color: #002147; }
+
+/* Advantage Cards */
+.adv-card {
+    background: #fff; padding: 25px; text-align: center; border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05); height: 100%; transition: 0.3s;
+}
+.adv-card:hover { transform: translateY(-5px); }
+.adv-card i { font-size: 30px; color: #8b1d1d; margin-bottom: 15px; }
+.adv-card h5 { font-size: 16px; font-weight: 700; }
+.adv-card p { font-size: 13px; color: #666; }
+
+/* Step Cards */
+.step-card {
+    background: #fff; padding: 15px 10px; border-bottom: 5px solid;
+    height: 100%; box-shadow: 0 4px 8px rgba(0,0,0,0.05); text-align: center;
+}
+.step-num {
+    width: 35px; height: 35px; border: 2px solid; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    margin: 0 auto 10px; font-weight: bold; font-size: 16px;
+}
+.step-card h6 { font-size: 12px; font-weight: bold; margin-bottom: 5px; }
+.step-card p { font-size: 10px; color: #888; margin: 0; line-height: 1.2; }
+
+/* Colors for Step Borders */
+.b-orange { border-color: #ffa500; } .b-orange .step-num { color: #ffa500; }
+.b-blue { border-color: #007bff; } .b-blue .step-num { color: #007bff; }
+.b-pink { border-color: #e83e8c; } .b-pink .step-num { color: #e83e8c; }
+.b-green { border-color: #28a745; } .b-green .step-num { color: #28a745; }
+.b-purple { border-color: #6f42c1; } .b-purple .step-num { color: #6f42c1; }
+.b-dark-orange { border-color: #fd7e14; } .b-dark-orange .step-num { color: #fd7e14; }
+
+@media (max-width: 768px) {
+    .nav-link { font-size: 11px; padding: 5px 10px !important; }
+}

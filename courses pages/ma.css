@@ -1,0 +1,94 @@
+html { scroll-behavior: smooth; }
+body { font-family: 'Inter', sans-serif; color: #333; }
+
+/* Back Link */
+.back-link { text-decoration: none; color: #333; font-weight: bold; font-size: 15px; transition: 0.3s; }
+.back-link:hover { color: #8b1d1d; padding-left: 5px; }
+
+/* specialisation */
+/* Category Buttons Styling */
+.category-buttons-wrapper {
+    display: flex;
+    justify-content: center; /* Center alignment for desktop */
+    gap: 10px;
+    flex-wrap: wrap; /* Taki screen choti hone par niche aa jayein */
+    padding: 10px 0;
+}
+
+.cat-btn {
+    background-color: #f8f9fa; /* Light grey background */
+    color: #333;
+    border: 1px solid #ddd;
+    padding: 8px 18px;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    white-space: nowrap; /* Text ko wrap hone se rokega */
+}
+
+/* Hover effect */
+.cat-btn:hover {
+    background-color: #800000; /* Maroon color match with your theme */
+    color: white;
+    border-color: #800000;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .category-buttons-wrapper {
+        justify-content: flex-start;
+        overflow-x: auto; /* Mobile par swipe karne ki suvidha */
+        flex-wrap: nowrap;
+        padding-bottom: 15px;
+    }
+    
+    /* Scrollbar design for mobile */
+    .category-buttons-wrapper::-webkit-scrollbar {
+        height: 4px;
+    }
+    .category-buttons-wrapper::-webkit-scrollbar-thumb {
+        background: #ccc;
+        border-radius: 10px;
+    }
+}
+
+/* Hero Box Navy Background */
+.hero-box { background-color: #002147; border-bottom: 5px solid #ffc107; }
+.text-warning { color: #ffc107 !important; }
+
+/* Navigation Maroon */
+.bg-maroon { background-color: #8b1d1d !important; }
+.nav-link { color: white !important; font-weight: 600; font-size: 13px; padding: 12px 18px !important; text-transform: uppercase; letter-spacing: 0.5px; }
+.nav-link:hover { background: rgba(0,0,0,0.1); }
+
+/* Titles */
+.section-title { font-weight: 800; border-left: 6px solid #8b1d1d; padding-left: 15px; color: #002147; margin-bottom: 25px; text-transform: uppercase; }
+
+/* Tables Design */
+.custom-table td { font-size: 14px; padding: 12px; vertical-align: middle; }
+.university-table thead tr { background-color: #002147 !important; border: none; }
+.university-table td { font-size: 13px; padding: 15px; border-bottom: 1px solid #eee; }
+.fee { color: #d32f2f; font-weight: bold; font-size: 15px; }
+
+/* Syllabus Cards */
+.syllabus-box { border: 1px solid #eee; border-radius: 10px; overflow: hidden; }
+.sem-header { background: #f8fbff; color: #002147; padding: 12px; font-weight: bold; text-align: center; font-size: 14px; border-bottom: 1px solid #e0e0e0; text-transform: uppercase; }
+.syl-list { list-style: none; padding: 15px; margin: 0; }
+.syl-list li { font-size: 12px; padding: 6px 0; border-bottom: 1px dotted #ddd; color: #555; line-height: 1.4; }
+
+/* Download Button (Orange) */
+.btn-dl { 
+    border: 1px solid #ff9800; color: #ff9800; padding: 6px 14px; 
+    text-decoration: none; font-size: 11px; font-weight: bold; border-radius: 4px; display: inline-block; transition: 0.3s;
+}
+.btn-dl:hover { background: #ff9800; color: white; box-shadow: 0 2px 5px rgba(255,152,0,0.3); }
+
+/* Mobile Optimization */
+@media (max-width: 768px) {
+    .nav-link { font-size: 10px; padding: 10px 5px !important; }
+    .syllabus-box .row .col-6 { width: 100%; border-right: none !important; border-bottom: 1px solid #eee; }
+    .hero-box h1 { font-size: 1.5rem; }
+}

@@ -1,0 +1,86 @@
+/* --- About Us Page Specific Styles --- */
+
+.about-page-body {
+    background-color: #FFFFFF; /* Background color from Picture 2 */
+    font-family: 'Arial', sans-serif;
+    color: #1A1A1A; /* Primary text color */
+}
+
+/* Hero Banner */
+.about-banner-img {
+    max-height: 500px;
+    object-fit: cover;
+    display: block;
+}
+
+/* Title Styling */
+.about-title-6 {
+    font-size: 48px;
+    font-weight: 800;
+    color: #0B1F3A; /* Secondary Navy color */
+    letter-spacing: 2px;
+    margin-bottom: 30px;
+}
+
+/* Description Text */
+.about-description-6 {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #555555; /* Secondary text color */
+    text-align: center;
+}
+
+/* Highlight Colors from Picture 2 */
+.highlight-maroon {
+    color: #7A0C0C; /* Primary Maroon */
+    font-weight: 700;
+}
+
+.highlight-navy {
+    color: #0B1F3A; /* Secondary Navy */
+    font-weight: 600;
+}
+
+/* Get Free Counseling Button */
+.btn-counseling-6 {
+    background-color: #0B1F3A; /* Secondary Navy Blue */
+    color: #FFFFFF;
+    padding: 15px 40px;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 700;
+    border-radius: 4px;
+    transition: 0.3s ease;
+    display: inline-block;
+}
+
+.btn-counseling-6:hover {
+    background-color: #7A0C0C; /* Switch to Maroon on hover */
+    color: #FFFFFF;
+    transform: translateY(-2px);
+}
+
+/* Back Link Styling */
+.back-link-6 {
+    color: #0B1F3A;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 18px;
+    border-bottom: 2px solid transparent;
+    transition: 0.3s;
+}
+
+.back-link-6 i {
+    margin-right: 8px;
+}
+
+.back-link-6:hover {
+    color: #7A0C0C; /* Change to Maroon */
+    border-bottom: 2px solid #7A0C0C;
+}
+
+/* Responsive Fixes */
+@media (max-width: 768px) {
+    .about-title-6 { font-size: 32px; }
+    .about-description-6 { font-size: 16px; }
+}
