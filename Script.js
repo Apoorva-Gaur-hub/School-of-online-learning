@@ -1,38 +1,29 @@
-//section 4 js
-    
-        function scrollSlider(distance) {
-            document.getElementById('slider').scrollBy({
-                left: distance,
-                behavior: 'smooth'
-            });
-        }
+// <!-- section 1 (header or hero page) -->
+
+    const mobileMenu = document.getElementById('mobile-menu');
+    const navBar = document.getElementById('nav-bar');
+
+    mobileMenu.addEventListener('click', () => {
+        navBar.classList.toggle('active');
+    });
 
 
-//section 6
-    function scrollPartnerGrid(distance) {
-        document.getElementById('partner-grid').scrollBy({
-            left: distance,
-            behavior: 'smooth'
-        });
-    }
- 
-//section 9
-function toggleFaq(element) {
+// <!-- section 10 (FAQ) -->
+
+function toggleS10Faq(element) {
     const item = element.parentElement;
-    
-    // Baki sab open boxes ko band karne ke liye (Optional)
-    // document.querySelectorAll('.faq-item').forEach(el => {
-    //     if (el !== item) el.classList.remove('active');
-    //     if (el !== item) el.querySelector('.faq-answer').style.maxHeight = null;
-    // });
+    const isActive = item.classList.contains('active');
 
-    // Current box ko toggle karein
-    item.classList.toggle('active');
-    const answer = item.querySelector('.faq-answer');
-    
-    if (item.classList.contains('active')) {
+    // Baaki sab band karne ke liye (Optional: Close others)
+    document.querySelectorAll('.s10-item').forEach(el => {
+        el.classList.remove('active');
+        el.querySelector('.s10-answer').style.maxHeight = null;
+    });
+
+    // Sirf isse open karne ke liye
+    if (!isActive) {
+        item.classList.add('active');
+        const answer = item.querySelector('.s10-answer');
         answer.style.maxHeight = answer.scrollHeight + "px";
-    } else {
-        answer.style.maxHeight = null;
     }
 }
